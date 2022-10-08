@@ -20,15 +20,15 @@ const router = createBrowserRouter([
         errorElement: <ErrorHome />,
         children: [
             {
-                path: process.env.REACT_APP_BASE_PATH+"",
+                path: "",
                 element: <Protected ifLoggedIn={true}><Home /></Protected>,
             },
             {
-                path: process.env.REACT_APP_BASE_PATH+"sign-up",
+                path: "sign-up",
                 element: <Protected ifLoggedIn={false}><SignUp /></Protected>,
             },
             {
-                path: process.env.REACT_APP_BASE_PATH+"sign-in",
+                path: "sign-in",
                 element: <Protected ifLoggedIn={false}><SignIn /></Protected>,
             },
         ],

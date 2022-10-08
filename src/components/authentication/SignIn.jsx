@@ -30,7 +30,7 @@ const SignIn = () => {
             if(res.data.success) {
                 console.log(res.data.messsage);
                 login();
-                navigate('/');
+                navigate('');
             } else {
                 console.log(err || res.data.error)
             }

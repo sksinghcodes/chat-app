@@ -19,13 +19,13 @@ function App() {
         localStorage.setItem('isLoggedIn', false);
     };
 
-    const navClass = pathname => location.pathname === pathname ? ' active' : '';
+    const navClass = pathname => location.pathname.endsWith('/'+pathname) ? ' active' : '';
 
     return (
         <div className="App">
             <nav className="navbar navbar-expand-lg bg-white shadow">
                 <div className="container">
-                    <Link className="navbar-brand" to="/">MERN CHAT</Link>
+                    <Link className="navbar-brand" to="">MERN CHAT</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -33,7 +33,7 @@ function App() {
                         <ul className="nav nav-pills flex-column flex-lg-row mt-2 mt-lg-0">
                             {isLoggedIn && <>
                             <li className="nav-item">
-                                <Link className={"nav-link" + navClass("/")} to="/">Home</Link>
+                                <Link className={"nav-link" + navClass("chat-app")} to="chat-app">Home</Link>
                             </li>
                             <li className="nav-item ms-lg-3">
                                 <button className="btn nav-link" onClick={logout}>Sign out</button>
@@ -41,10 +41,10 @@ function App() {
                             </>}
                             {!isLoggedIn && <>
                             <li className="nav-item ms-lg-3">
-                                <Link className={"nav-link" + navClass("/sign-up")} to="/sign-up">Sign Up</Link>
+                                <Link className={"nav-link" + navClass("sign-up")} to="sign-up">Sign Up</Link>
                             </li>
                             <li className="nav-item ms-lg-3">
-                                <Link className={"nav-link" + navClass("/sign-in")} to="/sign-in">Sign In</Link>
+                                <Link className={"nav-link" + navClass("sign-in")} to="sign-in">Sign In</Link>
                             </li>
                             </>}
                         </ul>
