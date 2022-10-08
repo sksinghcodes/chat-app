@@ -13,6 +13,8 @@ import Protected from './components/authentication/Protected'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+console.log(process.env.REACT_APP_BASE_PATH)
+
 const router = createBrowserRouter([
     {
         path: process.env.REACT_APP_BASE_PATH,
