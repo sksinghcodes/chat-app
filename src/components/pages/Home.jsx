@@ -31,7 +31,7 @@ const Home = () => {
         setLoadingAll(true);
         const next = () => setLoadingAll(false);
         axios.get('/task/all').then((req, res) => handleResponse(req, res, next));
-    }, [])
+    }, [handleResponse])
 
     const addTask = e => {
         e.preventDefault();
