@@ -13,11 +13,12 @@ import Protected from './components/authentication/Protected'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-console.log(process.env.REACT_APP_BASE_PATH)
+console.log(process.env)
 
 const router = createBrowserRouter([
     {
         path: process.env.REACT_APP_BASE_PATH,
+
         element: <App />,
         errorElement: <ErrorHome />,
         children: [
