@@ -17,8 +17,7 @@ console.log(process.env)
 
 const router = createBrowserRouter([
     {
-        path: process.env.REACT_APP_BASE_PATH,
-
+        path: '/',
         element: <App />,
         errorElement: <ErrorHome />,
         children: [
@@ -36,7 +35,9 @@ const router = createBrowserRouter([
             },
         ],
     },
-]);
+], {
+    basename: "/chat-app",
+});
 
 root.render(
     <React.StrictMode>

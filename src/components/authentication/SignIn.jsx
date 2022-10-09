@@ -28,9 +28,8 @@ const SignIn = () => {
         setLoading(true);
         axios.post('/user/sign-in', signInState).then((res, err) => {
             if(res.data.success) {
-                console.log(res.data.messsage);
                 login();
-                navigate('');
+                navigate('/');
             } else {
                 console.log(err || res.data.error)
             }

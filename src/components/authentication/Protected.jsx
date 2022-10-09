@@ -12,7 +12,7 @@ const Protected = ({ifLoggedIn, children}) => {
     if(ifLoggedIn){
         return <Navigate to="sign-up" replace />;
     } else {
-        return <Navigate to="" replace />;
+        return <Navigate to="/" replace />;
     }
 }
  
