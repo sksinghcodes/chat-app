@@ -35,9 +35,7 @@ const router = createBrowserRouter([
             },
         ],
     },
-], {
-    basename: "/chat-app",
-});
+]);
 
 root.render(
     <React.StrictMode>
