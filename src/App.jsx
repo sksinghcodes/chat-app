@@ -7,7 +7,6 @@ function App() {
     const [isLoggedIn, setLoginStatus] = useState(!!JSON.parse(localStorage.getItem('isLoggedIn')));
 
     const location = useLocation();
-    console.log();
 
     const login = () => {
         setLoginStatus(true);
